@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container">
           <div className="row">
             <a href="#hero" className="logo">
-              <Image src={logo} width={119} height={50} quality={100} alt="" />
+              <Image src={logo} quality={100} alt="" />
             </a>
           </div>
         </div>
@@ -80,10 +80,11 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <h2>Antecipe em poucos passos</h2>
-              <p>
+              <p className="subtitle">
                 Esperar 30 dias ou mais para receber suas vendas compromete seu
                 capital de giro. Com a Ryze, você antecipa suas vendas de forma
-                rápida, fácil e transparente!
+                <strong> rápida</strong>,<strong> fácil</strong> e
+                <strong> transparente!</strong>
               </p>
               <div className="boxes">
                 <div className="box">
