@@ -168,6 +168,7 @@ END CSS VARIABLES
 body {
   position: relative;
   background: var(--white);
+  font-family: var(--pop);
 }
 h1 {
   font-family: var(--pop);
@@ -228,7 +229,7 @@ p {
   line-height: 1.7;
   margin-bottom: 2rem;
 }
-strong{
+strong {
   font-weight: var(--font-bold);
 }
 .container {
@@ -288,29 +289,28 @@ HERO
 .hero .row {
   display: grid;
   grid-template-columns: 50% 1fr;
-  gap:5rem;
+  gap: 5rem;
   align-items: center;
 }
-.hero .content ul.checked-list{
+.hero .content ul.checked-list {
   margin-bottom: 3rem;
-
 }
-.hero .content ul.checked-list li{ 
+.hero .content ul.checked-list li {
   font-family: 'Poppins';
   color: var(--white);
   font-weight: var(--font-regular);
-  position: relative; 
-  padding-left: 3rem; 
-  margin-bottom: 1.5rem; 
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1.5rem;
   font-size: 1.5rem;
   line-height: 1.5;
 }
 .hero .content ul.checked-list li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
-  top: 0.3rem; 
-  width: 2rem; 
+  top: 0.3rem;
+  width: 2rem;
   height: 2rem;
   background-image: url('../public/icon-check.png');
   background-size: cover;
@@ -329,8 +329,8 @@ ANTECIPE
 .antecipe {
   padding: 3rem 0;
 }
-.antecipe .subtitle{
-  width: 40% ;
+.antecipe .subtitle {
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
   color: var(--black);
@@ -345,9 +345,7 @@ ANTECIPE
   position: relative;
 }
 
-
-
-.antecipe .boxes::before{
+.antecipe .boxes::before {
   content: '';
   width: calc((25rem * 2) + (6rem * 2));
   height: 2px;
@@ -358,18 +356,15 @@ ANTECIPE
   border-top: 2px dashed black;
 }
 
-
 .antecipe .boxes .box::before {
   content: '';
   width: 2px;
   height: 20px;
   position: absolute;
   left: 50%;
-  top:-25px;
+  top: -25px;
   border-left: 2px dashed black;
 }
-
-
 
 .antecipe .boxes .box {
   position: relative;
@@ -398,37 +393,37 @@ END ANTECIPE
 /*
 DESTAQUES
 */
-  .destaques .row{
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, calc(50% - 2.5rem));
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    margin-bottom: 3rem;
-  }
-  .destaques h2{
+.destaques .row {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 2.5rem));
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+.destaques h2 {
   text-align: left;
-  }
-  .destaques h2::before {
-    left: 0;
-    transform: translateX(0);
-  }
-  .destaques h2::after {
-    left: 0;
-    transform: translateX(0);
-  }
-  .destaques p{
-    color: var(--blue);
-  }
-  .destaques .section-image{
-    margin: 0 auto;
-  }
-  .destaques .section-image img{
-    max-width: 100%;
-    height: auto;
-  }
+}
+.destaques h2::before {
+  left: 0;
+  transform: translateX(0);
+}
+.destaques h2::after {
+  left: 0;
+  transform: translateX(0);
+}
+.destaques p {
+  color: var(--blue);
+}
+.destaques .section-image {
+  margin: 0 auto;
+}
+.destaques .section-image img {
+  max-width: 100%;
+  height: auto;
+}
 /*
 END DESTAQUES
 */
@@ -530,6 +525,12 @@ END FOOTER
   .antecipe .subtitle {
     width: 60%;
   }
+  .antecipe .boxes .box {
+    width: 20rem;
+  }
+  .antecipe .boxes::before {
+    width: calc((20rem * 2) + (6rem * 2));
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -556,11 +557,27 @@ END FOOTER
     width: 80%;
     grid-template-columns: 1fr;
   }
-  .destaques .content{
+  .destaques .content {
     order: 1;
   }
-  .destaques .section-image{
+  .destaques .section-image {
     order: 2;
+  }
+  .antecipe .boxes .box:first-child::before {
+    display: none;
+  }
+  .antecipe .boxes {
+    gap: 4rem;
+  }
+  .antecipe .boxes .box::before {
+    height: 35px;
+    top: -40px;
+  }
+  .antecipe .boxes::before {
+    display: none;
+  }
+  .antecipe .boxes .box {
+    width: 25rem;
   }
   .video-sobre .row {
     width: 100%;
@@ -581,10 +598,10 @@ END FOOTER
   header.menu a.logo img {
     height: 4rem;
   }
-  .hero .content ul.checked-list li{
+  .hero .content ul.checked-list li {
     font-size: 1.3rem;
   }
-  .destaques h2{
+  .destaques h2 {
     font-size: 2.5rem;
   }
   .video-sobre {
