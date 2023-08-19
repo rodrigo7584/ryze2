@@ -26,6 +26,10 @@ import illustrationPinpad from '../public/pinpad.png'
 import illustrationWhats from '../public/whatsapp.png'
 import illustrationPix from '../public/pix.png'
 import illustrationHandShaking from '../public/hand-shaking.png'
+import whiteLogo from '../public/logo-white.png'
+import iconLikendin from '../public/icon-linkedin.png'
+import iconFacebook from '../public/icon-facebook.png'
+import iconInstagram from '../public/icon-instagram.png'
 
 export default function Home() {
   return (
@@ -262,7 +266,13 @@ export default function Home() {
           <div className="row">
             <div className="about">
               <a href="#hero" className="logo">
-                <img src="/logo-white.png" alt="" />
+                <Image
+                  src={whiteLogo}
+                  width={120}
+                  height={50}
+                  quality={100}
+                  alt=""
+                />
               </a>
               <p>TERMOS DE USO, OPT-IN E POLÍTICA DE PRIVACIDADE</p>
               <p>Nome da Empresa Ltda</p>
@@ -276,18 +286,36 @@ export default function Home() {
               <ul className="social-list">
                 <li>
                   <a href="#">
-                    <img src="/icon-linkedin.png" alt="" />
+                    <Image
+                      src={iconLikendin}
+                      width={31}
+                      height={31}
+                      quality={100}
+                      alt=""
+                    />
                   </a>
                 </li>
 
                 <li>
                   <a href="#">
-                    <img src="/icon-facebook.png" alt="" />
+                    <Image
+                      src={iconFacebook}
+                      width={31}
+                      height={31}
+                      quality={100}
+                      alt=""
+                    />
                   </a>
                 </li>
                 <li>
                   <a href="#">
-                    <img src="/icon-instagram.png" alt="" />
+                    <Image
+                      src={iconInstagram}
+                      width={31}
+                      height={31}
+                      quality={100}
+                      alt=""
+                    />
                   </a>
                 </li>
               </ul>
